@@ -106,7 +106,7 @@ The interactive mode allows you to have a chat with `kubectl-ai`, asking multipl
 Or, run with a task as input:
 
 ```shell
-kubectl-ai -quiet "fetch logs for nginx app in hello namespace"
+kubectl-ai --quiet "fetch logs for nginx app in hello namespace"
 ```
 
 Combine it with other unix commands:
@@ -143,19 +143,19 @@ Use it via the `kubectl` plug interface like this: `kubectl ai`.  kubectl will f
 
 ```bash
 # Get information about pods in the default namespace
-kubectl-ai -quiet "show me all pods in the default namespace"
+kubectl-ai --quiet "show me all pods in the default namespace"
 
 # Create a new deployment
-kubectl-ai -quiet "create a deployment named nginx with 3 replicas using the nginx:latest image"
+kubectl-ai --quiet "create a deployment named nginx with 3 replicas using the nginx:latest image"
 
 # Troubleshoot issues
-kubectl-ai -quiet "double the capacity for the nginx app"
+kubectl-ai --quiet "double the capacity for the nginx app"
 
 # Using Azure OpenAI instead of Gemini
-kubectl-ai --llm-provider=azopenai --model=your_azure_openai_deployment_name_here -quiet "scale the nginx deployment to 5 replicas"
+kubectl-ai --llm-provider=azopenai --model=your_azure_openai_deployment_name_here --quiet "scale the nginx deployment to 5 replicas"
 
 # Using OpenAI instead of Gemini
-kubectl-ai --llm-provider=openai --model=gpt-4.1 -quiet "scale the nginx deployment to 5 replicas"
+kubectl-ai --llm-provider=openai --model=gpt-4.1 --quiet "scale the nginx deployment to 5 replicas"
 ```
 
 The `kubectl-ai` will process your query, execute the appropriate kubectl commands, and provide you with the results and explanations.
