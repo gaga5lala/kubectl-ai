@@ -37,7 +37,7 @@ kubectl-ai --model gemini-2.5-pro-exp-03-25
 kubectl-ai --quiet --model gemini-2.5-flash-preview-04-17 "check logs for nginx app in hello namespace"
 ```
 
-#### Using AI models running locally (ollama or llamacpp)
+#### Using AI models running locally (ollama or llama.cpp)
 
 You can use `kubectl-ai` with AI models running locally. `kubectl-ai` supports [ollama](https://ollama.com/) and [llama.cpp](https://github.com/ggml-org/llama.cpp) to use the AI models running locally.
 
@@ -86,14 +86,14 @@ kubectl-ai --llm-provider=openai --model=gpt-4.1
 ```
 
 #### Using OpenAI Compatible API
-For example, you can use aliyun qwen-xxx module as follows
+For example, you can use aliyun qwen-xxx models as follows
 ```bash
 export OPENAI_API_KEY=your_openai_api_key_here
 export OPENAI_ENDPOINT=https://dashscope.aliyuncs.com/compatible-mode/v1
 kubectl-ai --llm-provider=openai --model=qwen-plus
 ```
 
-* Note: `kubectl-ai` supports AI models from `gemini`, `vertexai`, `azopenai`, `openai`, `grok` and local LLM providers such as `ollama` and `llamacpp`.
+* Note: `kubectl-ai` supports AI models from `gemini`, `vertexai`, `azopenai`, `openai`, `grok` and local LLM providers such as `ollama` and `llama.cpp`.
 
 Run interactively:
 
